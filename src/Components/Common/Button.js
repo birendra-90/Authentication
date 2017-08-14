@@ -7,7 +7,7 @@ const Button = ({onPress,children}) => {
 
     return (
         <TouchableOpacity onPress = { onPress } style = {buttonStyling}>
-            {children}
+          <Text style = {textStyling}> {children} </Text>  
         </TouchableOpacity>    
     );
 };
@@ -21,11 +21,12 @@ const Style = {
         borderWidth : 1,
         height : 30,
         justifyContent : 'space-around',
-        backgroundColor : '#2196F3'
+        backgroundColor : '#00BCD4',
+    
     },
     textStyling : {
         alignSelf : 'center',
-        color : '#ECEFF1',
+        color : '#000000',
         fontSize : 16,
         fontWeight : '600',
         padding : 10

@@ -1,31 +1,31 @@
 import React from 'react';
 import {TextInput, View, Text} from 'react-native';
 
-const Input = ({ label ,value, onChangeText }) => {
+const Input = ({ label ,value, onChangeText,placeHolder,secureTextEntry,autoCapitalize,autoCorrect }) => {
     
-    state = { text : '' };
-
     const {textInputStyle,labelStyle,viewStyle} = Styles;
 
     return(
         <View style = {viewStyle}>
             <Text style = {labelStyle}> {label}</Text>
             <TextInput 
+            secureTextEntry = {secureTextEntry}
+            autoCorrect = {autoCorrect}
+            autoCapitalize = {autoCapitalize}
+            placeholder = {placeHolder}
             value = {value}
             onChangeText = {onChangeText}
             style = {textInputStyle}      
             />
 
-        </View>
+            </View>
     );
 };
 
 const Styles = {
     textInputStyle : {
-        fontSize : 20,
+        fontSize : 18,
         color : '#212121',
-        height : 20,
-        width : 250,
         paddingRight : 5,
         paddingLeft : 5,
         lineHeight : 23,
@@ -34,16 +34,18 @@ const Styles = {
     labelStyle :{
             fontSize :18,
             paddingLeft :20,
-            flex :1             
+            flex :1,
+            color : '#000000'             
     },
     viewStyle : {
          height : 40,
+         width :200,
          flex : 1,
          flexDirection : 'row',
-         align : 'center'
+         alignItems : 'center'
     }
 
 };
 
 
-export  {TextInput};
+export  {Input};
